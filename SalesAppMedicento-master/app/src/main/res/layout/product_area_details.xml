@@ -121,6 +121,7 @@
                 android:layout_height="wrap_content"
                 android:text="Add New Pharmacy"
                 android:textStyle="bold"
+                android:id="@+id/newpharam"
                 style="@style/Widget.AppCompat.Button.Colored"
                 />
         </LinearLayout>

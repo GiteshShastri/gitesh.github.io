@@ -16,7 +16,7 @@ import android.widget.Spinner;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-    Button totalSales, oredrs, returns, earnings,profile,pharmab,areab;
+    Button totalSales, oredrs, returns, earnings,profile,pharmab,areab,newpharma;
     AutoCompleteTextView pharma_spinner,area_spinner;
     Spinner slots;
     CoordinatorLayout coordinatorLayout;
@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         returns = (Button) findViewById(R.id.returns);
         earnings = (Button) findViewById(R.id.earnings);
         profile = (Button) findViewById(R.id.profile);
+        newpharma = (Button) findViewById(R.id.newpharam);
         slots = (Spinner) findViewById(R.id.slots);
         pharmab = (Button) findViewById(R.id.pharmacyb);
         areab = (Button) findViewById(R.id.areab);
@@ -75,6 +76,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         profile.setOnClickListener(this);
         areab.setOnClickListener(this);
         pharmab.setOnClickListener(this);
+        newpharma.setOnClickListener(this);
     }
 
     @Override
@@ -112,6 +114,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                   break;
             case R.id.openPlaceOrder:
                 intent = new Intent(this, PlaceOrderActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.newpharam: intent = new Intent(this, NewPharma.class);
                 startActivity(intent);
                 break;
         }
